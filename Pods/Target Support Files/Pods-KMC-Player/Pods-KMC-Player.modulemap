@@ -1,0 +1,6 @@
+framework module Pods_KMC_Player {
+  umbrella header "Pods-KMC-Player-umbrella.h"
+
+  export *
+  module * { export * }
+}

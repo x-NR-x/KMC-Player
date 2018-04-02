@@ -1,0 +1,850 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3300C66DB8B050F1718C6ADC /* Pods_KMC_Player.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC5D29DC0BF73771E2B418B3 /* Pods_KMC_Player.framework */; };
+		777DEC0650D6A630E46D199C /* Pods_KMC_PlayerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 763AD13602B2DFA557E13D5C /* Pods_KMC_PlayerTests.framework */; };
+		BFEE5639C6F5F6623CD6CBD5 /* Pods_KMC_PlayerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B3B05417796ABCDC8853A54 /* Pods_KMC_PlayerUITests.framework */; };
+		D20C1E072068279400E6E5E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C1E062068279400E6E5E1 /* AppDelegate.swift */; };
+		D20C1E0C2068279400E6E5E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20C1E0A2068279400E6E5E1 /* Main.storyboard */; };
+		D20C1E0E2068279400E6E5E1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D20C1E0D2068279400E6E5E1 /* Assets.xcassets */; };
+		D20C1E112068279400E6E5E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D20C1E0F2068279400E6E5E1 /* LaunchScreen.storyboard */; };
+		D20C1E1C2068279400E6E5E1 /* KMC_PlayerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C1E1B2068279400E6E5E1 /* KMC_PlayerTests.swift */; };
+		D20C1E272068279400E6E5E1 /* KMC_PlayerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C1E262068279400E6E5E1 /* KMC_PlayerUITests.swift */; };
+		D20C1E4B2068299700E6E5E1 /* UIAnimatedPlayButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C1E3F2068299600E6E5E1 /* UIAnimatedPlayButton.swift */; };
+		D20C1E4E2068299700E6E5E1 /* UIImageView+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D20C1E442068299700E6E5E1 /* UIImageView+Helper.swift */; };
+		D21768102072149400316CB9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21768082072149400316CB9 /* LoginViewController.swift */; };
+		D21768112072149400316CB9 /* MediaCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D21768092072149400316CB9 /* MediaCollectionViewController.swift */; };
+		D21768122072149400316CB9 /* MediaPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217680A2072149400316CB9 /* MediaPlayerViewController.swift */; };
+		D21768132072149400316CB9 /* VideoMediaEntryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217680C2072149400316CB9 /* VideoMediaEntryCollectionViewCell.swift */; };
+		D21768142072149400316CB9 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217680E2072149400316CB9 /* UserManager.swift */; };
+		D21768152072149400316CB9 /* BaseEntryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D217680F2072149400316CB9 /* BaseEntryManager.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D20C1E182068279400E6E5E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D20C1DFB2068279400E6E5E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D20C1E022068279400E6E5E1;
+			remoteInfo = "KMC-Player";
+		};
+		D20C1E232068279400E6E5E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D20C1DFB2068279400E6E5E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D20C1E022068279400E6E5E1;
+			remoteInfo = "KMC-Player";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01AEB3B4F5955A3806DFD66B /* Pods-KMC-Player.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMC-Player.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMC-Player/Pods-KMC-Player.debug.xcconfig"; sourceTree = "<group>"; };
+		442A84F02E79CD99A36850D1 /* Pods-KMC-PlayerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMC-PlayerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMC-PlayerTests/Pods-KMC-PlayerTests.release.xcconfig"; sourceTree = "<group>"; };
+		69562006DAA65D0C009B5FD1 /* Pods-KMC-PlayerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMC-PlayerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMC-PlayerUITests/Pods-KMC-PlayerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6F83716C49D71BEDE7FCCCFF /* Pods-KMC-PlayerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMC-PlayerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMC-PlayerUITests/Pods-KMC-PlayerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		763AD13602B2DFA557E13D5C /* Pods_KMC_PlayerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMC_PlayerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B3B05417796ABCDC8853A54 /* Pods_KMC_PlayerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMC_PlayerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80D99AE3D55795E8C0431CBD /* Pods-KMC-Player.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMC-Player.release.xcconfig"; path = "Pods/Target Support Files/Pods-KMC-Player/Pods-KMC-Player.release.xcconfig"; sourceTree = "<group>"; };
+		D20C1E032068279400E6E5E1 /* KMC-Player.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KMC-Player.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20C1E062068279400E6E5E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D20C1E0B2068279400E6E5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D20C1E0D2068279400E6E5E1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D20C1E102068279400E6E5E1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D20C1E122068279400E6E5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D20C1E172068279400E6E5E1 /* KMC-PlayerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KMC-PlayerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20C1E1B2068279400E6E5E1 /* KMC_PlayerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMC_PlayerTests.swift; sourceTree = "<group>"; };
+		D20C1E1D2068279400E6E5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D20C1E222068279400E6E5E1 /* KMC-PlayerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "KMC-PlayerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D20C1E262068279400E6E5E1 /* KMC_PlayerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KMC_PlayerUITests.swift; sourceTree = "<group>"; };
+		D20C1E282068279400E6E5E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D20C1E3F2068299600E6E5E1 /* UIAnimatedPlayButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAnimatedPlayButton.swift; sourceTree = "<group>"; };
+		D20C1E442068299700E6E5E1 /* UIImageView+Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Helper.swift"; sourceTree = "<group>"; };
+		D21768082072149400316CB9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D21768092072149400316CB9 /* MediaCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaCollectionViewController.swift; sourceTree = "<group>"; };
+		D217680A2072149400316CB9 /* MediaPlayerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MediaPlayerViewController.swift; sourceTree = "<group>"; };
+		D217680C2072149400316CB9 /* VideoMediaEntryCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoMediaEntryCollectionViewCell.swift; sourceTree = "<group>"; };
+		D217680E2072149400316CB9 /* UserManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		D217680F2072149400316CB9 /* BaseEntryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseEntryManager.swift; sourceTree = "<group>"; };
+		DD8683C9E842F28AB5A0C22B /* Pods-KMC-PlayerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KMC-PlayerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KMC-PlayerTests/Pods-KMC-PlayerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FC5D29DC0BF73771E2B418B3 /* Pods_KMC_Player.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KMC_Player.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D20C1E002068279400E6E5E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3300C66DB8B050F1718C6ADC /* Pods_KMC_Player.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D20C1E142068279400E6E5E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				777DEC0650D6A630E46D199C /* Pods_KMC_PlayerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D20C1E1F2068279400E6E5E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BFEE5639C6F5F6623CD6CBD5 /* Pods_KMC_PlayerUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		818249FC80787762C132DE57 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FC5D29DC0BF73771E2B418B3 /* Pods_KMC_Player.framework */,
+				763AD13602B2DFA557E13D5C /* Pods_KMC_PlayerTests.framework */,
+				7B3B05417796ABCDC8853A54 /* Pods_KMC_PlayerUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B903CE9B9105CE836C6615A3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				01AEB3B4F5955A3806DFD66B /* Pods-KMC-Player.debug.xcconfig */,
+				80D99AE3D55795E8C0431CBD /* Pods-KMC-Player.release.xcconfig */,
+				DD8683C9E842F28AB5A0C22B /* Pods-KMC-PlayerTests.debug.xcconfig */,
+				442A84F02E79CD99A36850D1 /* Pods-KMC-PlayerTests.release.xcconfig */,
+				69562006DAA65D0C009B5FD1 /* Pods-KMC-PlayerUITests.debug.xcconfig */,
+				6F83716C49D71BEDE7FCCCFF /* Pods-KMC-PlayerUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D20C1DFA2068279400E6E5E1 = {
+			isa = PBXGroup;
+			children = (
+				D20C1E052068279400E6E5E1 /* KMC-Player */,
+				D20C1E1A2068279400E6E5E1 /* KMC-PlayerTests */,
+				D20C1E252068279400E6E5E1 /* KMC-PlayerUITests */,
+				D20C1E042068279400E6E5E1 /* Products */,
+				B903CE9B9105CE836C6615A3 /* Pods */,
+				818249FC80787762C132DE57 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D20C1E042068279400E6E5E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D20C1E032068279400E6E5E1 /* KMC-Player.app */,
+				D20C1E172068279400E6E5E1 /* KMC-PlayerTests.xctest */,
+				D20C1E222068279400E6E5E1 /* KMC-PlayerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D20C1E052068279400E6E5E1 /* KMC-Player */ = {
+			isa = PBXGroup;
+			children = (
+				D20C1E432068299700E6E5E1 /* Extensions */,
+				D217680D2072149400316CB9 /* Model */,
+				D217680B2072149400316CB9 /* ViewCells */,
+				D21768072072149400316CB9 /* ViewControllers */,
+				D20C1E3E2068299600E6E5E1 /* Views */,
+				D20C1E062068279400E6E5E1 /* AppDelegate.swift */,
+				D20C1E0A2068279400E6E5E1 /* Main.storyboard */,
+				D20C1E0D2068279400E6E5E1 /* Assets.xcassets */,
+				D20C1E0F2068279400E6E5E1 /* LaunchScreen.storyboard */,
+				D20C1E122068279400E6E5E1 /* Info.plist */,
+			);
+			path = "KMC-Player";
+			sourceTree = "<group>";
+		};
+		D20C1E1A2068279400E6E5E1 /* KMC-PlayerTests */ = {
+			isa = PBXGroup;
+			children = (
+				D20C1E1B2068279400E6E5E1 /* KMC_PlayerTests.swift */,
+				D20C1E1D2068279400E6E5E1 /* Info.plist */,
+			);
+			path = "KMC-PlayerTests";
+			sourceTree = "<group>";
+		};
+		D20C1E252068279400E6E5E1 /* KMC-PlayerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D20C1E262068279400E6E5E1 /* KMC_PlayerUITests.swift */,
+				D20C1E282068279400E6E5E1 /* Info.plist */,
+			);
+			path = "KMC-PlayerUITests";
+			sourceTree = "<group>";
+		};
+		D20C1E3E2068299600E6E5E1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D20C1E3F2068299600E6E5E1 /* UIAnimatedPlayButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D20C1E432068299700E6E5E1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D20C1E442068299700E6E5E1 /* UIImageView+Helper.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D21768072072149400316CB9 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				D21768082072149400316CB9 /* LoginViewController.swift */,
+				D21768092072149400316CB9 /* MediaCollectionViewController.swift */,
+				D217680A2072149400316CB9 /* MediaPlayerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		D217680B2072149400316CB9 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				D217680C2072149400316CB9 /* VideoMediaEntryCollectionViewCell.swift */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
+		D217680D2072149400316CB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D217680E2072149400316CB9 /* UserManager.swift */,
+				D217680F2072149400316CB9 /* BaseEntryManager.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D20C1E022068279400E6E5E1 /* KMC-Player */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D20C1E2B2068279400E6E5E1 /* Build configuration list for PBXNativeTarget "KMC-Player" */;
+			buildPhases = (
+				F8F3978FB63862635867D96E /* [CP] Check Pods Manifest.lock */,
+				D20C1DFF2068279400E6E5E1 /* Sources */,
+				D20C1E002068279400E6E5E1 /* Frameworks */,
+				D20C1E012068279400E6E5E1 /* Resources */,
+				57CF6D779B3DB9F5F031A1C1 /* [CP] Embed Pods Frameworks */,
+				34FEC97577F2700C9FCC7B9F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KMC-Player";
+			productName = "KMC-Player";
+			productReference = D20C1E032068279400E6E5E1 /* KMC-Player.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D20C1E162068279400E6E5E1 /* KMC-PlayerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D20C1E2E2068279400E6E5E1 /* Build configuration list for PBXNativeTarget "KMC-PlayerTests" */;
+			buildPhases = (
+				BAF462FC58684BD6BF33D0EE /* [CP] Check Pods Manifest.lock */,
+				D20C1E132068279400E6E5E1 /* Sources */,
+				D20C1E142068279400E6E5E1 /* Frameworks */,
+				D20C1E152068279400E6E5E1 /* Resources */,
+				187049FCEF4A2B54C77EACF8 /* [CP] Embed Pods Frameworks */,
+				BDD5AF14C9FB8C80EBBF8A4C /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D20C1E192068279400E6E5E1 /* PBXTargetDependency */,
+			);
+			name = "KMC-PlayerTests";
+			productName = "KMC-PlayerTests";
+			productReference = D20C1E172068279400E6E5E1 /* KMC-PlayerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D20C1E212068279400E6E5E1 /* KMC-PlayerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D20C1E312068279400E6E5E1 /* Build configuration list for PBXNativeTarget "KMC-PlayerUITests" */;
+			buildPhases = (
+				48027F151C04D8D97FF0746A /* [CP] Check Pods Manifest.lock */,
+				D20C1E1E2068279400E6E5E1 /* Sources */,
+				D20C1E1F2068279400E6E5E1 /* Frameworks */,
+				D20C1E202068279400E6E5E1 /* Resources */,
+				2A79536AC5614A5277FDD4B3 /* [CP] Embed Pods Frameworks */,
+				5D3CFC63E115CACE58B53298 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D20C1E242068279400E6E5E1 /* PBXTargetDependency */,
+			);
+			name = "KMC-PlayerUITests";
+			productName = "KMC-PlayerUITests";
+			productReference = D20C1E222068279400E6E5E1 /* KMC-PlayerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D20C1DFB2068279400E6E5E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Nilit Danan";
+				TargetAttributes = {
+					D20C1E022068279400E6E5E1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					D20C1E162068279400E6E5E1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D20C1E022068279400E6E5E1;
+					};
+					D20C1E212068279400E6E5E1 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D20C1E022068279400E6E5E1;
+					};
+				};
+			};
+			buildConfigurationList = D20C1DFE2068279400E6E5E1 /* Build configuration list for PBXProject "KMC-Player" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D20C1DFA2068279400E6E5E1;
+			productRefGroup = D20C1E042068279400E6E5E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D20C1E022068279400E6E5E1 /* KMC-Player */,
+				D20C1E162068279400E6E5E1 /* KMC-PlayerTests */,
+				D20C1E212068279400E6E5E1 /* KMC-PlayerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D20C1E012068279400E6E5E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20C1E112068279400E6E5E1 /* LaunchScreen.storyboard in Resources */,
+				D20C1E0E2068279400E6E5E1 /* Assets.xcassets in Resources */,
+				D20C1E0C2068279400E6E5E1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D20C1E152068279400E6E5E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D20C1E202068279400E6E5E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		187049FCEF4A2B54C77EACF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMC-PlayerTests/Pods-KMC-PlayerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2A79536AC5614A5277FDD4B3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMC-PlayerUITests/Pods-KMC-PlayerUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		34FEC97577F2700C9FCC7B9F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMC-Player/Pods-KMC-Player-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		48027F151C04D8D97FF0746A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMC-PlayerUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		57CF6D779B3DB9F5F031A1C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KMC-Player/Pods-KMC-Player-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/KalturaClient/KalturaClient.framework",
+				"${BUILT_PRODUCTS_DIR}/KalturaNetKit/KalturaNetKit.framework",
+				"${BUILT_PRODUCTS_DIR}/Log/Log.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKit/PlayKit.framework",
+				"${BUILT_PRODUCTS_DIR}/PlayKitUtils/PlayKitUtils.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyXMLParser/SwiftyXMLParser.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KalturaNetKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Log.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PlayKitUtils.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyXMLParser.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMC-Player/Pods-KMC-Player-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D3CFC63E115CACE58B53298 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMC-PlayerUITests/Pods-KMC-PlayerUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAF462FC58684BD6BF33D0EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMC-PlayerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDD5AF14C9FB8C80EBBF8A4C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KMC-PlayerTests/Pods-KMC-PlayerTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F8F3978FB63862635867D96E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KMC-Player-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D20C1DFF2068279400E6E5E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D21768102072149400316CB9 /* LoginViewController.swift in Sources */,
+				D21768152072149400316CB9 /* BaseEntryManager.swift in Sources */,
+				D20C1E4E2068299700E6E5E1 /* UIImageView+Helper.swift in Sources */,
+				D21768112072149400316CB9 /* MediaCollectionViewController.swift in Sources */,
+				D21768132072149400316CB9 /* VideoMediaEntryCollectionViewCell.swift in Sources */,
+				D20C1E4B2068299700E6E5E1 /* UIAnimatedPlayButton.swift in Sources */,
+				D21768122072149400316CB9 /* MediaPlayerViewController.swift in Sources */,
+				D21768142072149400316CB9 /* UserManager.swift in Sources */,
+				D20C1E072068279400E6E5E1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D20C1E132068279400E6E5E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20C1E1C2068279400E6E5E1 /* KMC_PlayerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D20C1E1E2068279400E6E5E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20C1E272068279400E6E5E1 /* KMC_PlayerUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D20C1E192068279400E6E5E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D20C1E022068279400E6E5E1 /* KMC-Player */;
+			targetProxy = D20C1E182068279400E6E5E1 /* PBXContainerItemProxy */;
+		};
+		D20C1E242068279400E6E5E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D20C1E022068279400E6E5E1 /* KMC-Player */;
+			targetProxy = D20C1E232068279400E6E5E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D20C1E0A2068279400E6E5E1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D20C1E0B2068279400E6E5E1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D20C1E0F2068279400E6E5E1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D20C1E102068279400E6E5E1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D20C1E292068279400E6E5E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D20C1E2A2068279400E6E5E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D20C1E2C2068279400E6E5E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 01AEB3B4F5955A3806DFD66B /* Pods-KMC-Player.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KMTL3NW26Z;
+				INFOPLIST_FILE = "KMC-Player/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.KMC-Player";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D20C1E2D2068279400E6E5E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 80D99AE3D55795E8C0431CBD /* Pods-KMC-Player.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KMTL3NW26Z;
+				INFOPLIST_FILE = "KMC-Player/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.KMC-Player";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D20C1E2F2068279400E6E5E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD8683C9E842F28AB5A0C22B /* Pods-KMC-PlayerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KMTL3NW26Z;
+				INFOPLIST_FILE = "KMC-PlayerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.KMC-PlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMC-Player.app/KMC-Player";
+			};
+			name = Debug;
+		};
+		D20C1E302068279400E6E5E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 442A84F02E79CD99A36850D1 /* Pods-KMC-PlayerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KMTL3NW26Z;
+				INFOPLIST_FILE = "KMC-PlayerTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.KMC-PlayerTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KMC-Player.app/KMC-Player";
+			};
+			name = Release;
+		};
+		D20C1E322068279400E6E5E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69562006DAA65D0C009B5FD1 /* Pods-KMC-PlayerUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KMTL3NW26Z;
+				INFOPLIST_FILE = "KMC-PlayerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.KMC-PlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "KMC-Player";
+			};
+			name = Debug;
+		};
+		D20C1E332068279400E6E5E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6F83716C49D71BEDE7FCCCFF /* Pods-KMC-PlayerUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KMTL3NW26Z;
+				INFOPLIST_FILE = "KMC-PlayerUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.ios.KMC-PlayerUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "KMC-Player";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D20C1DFE2068279400E6E5E1 /* Build configuration list for PBXProject "KMC-Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D20C1E292068279400E6E5E1 /* Debug */,
+				D20C1E2A2068279400E6E5E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D20C1E2B2068279400E6E5E1 /* Build configuration list for PBXNativeTarget "KMC-Player" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D20C1E2C2068279400E6E5E1 /* Debug */,
+				D20C1E2D2068279400E6E5E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D20C1E2E2068279400E6E5E1 /* Build configuration list for PBXNativeTarget "KMC-PlayerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D20C1E2F2068279400E6E5E1 /* Debug */,
+				D20C1E302068279400E6E5E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D20C1E312068279400E6E5E1 /* Build configuration list for PBXNativeTarget "KMC-PlayerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D20C1E322068279400E6E5E1 /* Debug */,
+				D20C1E332068279400E6E5E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D20C1DFB2068279400E6E5E1 /* Project object */;
+}
