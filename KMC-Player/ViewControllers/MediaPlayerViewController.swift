@@ -22,7 +22,7 @@ class MediaPlayerViewController: UIViewController {
     @IBOutlet weak var bottomVisualEffectView: UIVisualEffectView!
     @IBOutlet weak var bottomVisualEffectViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var middleVisualEffectView: UIVisualEffectView!
-    @IBOutlet weak var tracksVisualEffectView: UIVisualEffectView!
+    @IBOutlet weak var settingsVisualEffectView: UIVisualEffectView!
     let topBottomVisualEffectViewHeight: Float = 50.0
     
     @IBOutlet weak var animatedPlayButton: UIAnimatedPlayButton!
@@ -114,6 +114,18 @@ class MediaPlayerViewController: UIViewController {
         self.showPlayerControllers(show)
     }
     
+    private func updateAnimatedPlayButton() {
+        guard let player = self.player else {
+            return
+        }
+        
+        if player.isPlaying {
+            self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Pause)
+        } else {
+            self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Play)
+        }
+    }
+    
     // MARK: - Events Registration
     
     func registerPlayerEvents() {
@@ -129,18 +141,16 @@ class MediaPlayerViewController: UIViewController {
         
         player.addObserver(self, events: [PlayerEvent.stopped, PlayerEvent.ended, PlayerEvent.play, PlayerEvent.pause]) { event in
             if type(of: event) == PlayerEvent.stopped {
-                // handle playing event
                 print("Stopped Event")
             } else if type(of: event) == PlayerEvent.ended {
-                // handle playing event
                 print("Ended Event")
             } else if type(of: event) == PlayerEvent.play {
-                // handle playing event
                 print("Play Event")
             } else if type(of: event) == PlayerEvent.pause {
-                // handle playing event
                 print("Pause Event")
             }
+            
+            self.updateAnimatedPlayButton()
         }
     }
     
@@ -169,24 +179,25 @@ class MediaPlayerViewController: UIViewController {
         
         self.showPlayerControllers(false)
         UIView.animate(withDuration: 0.5, delay: 0, options: .transitionCrossDissolve, animations: {
-            self.tracksVisualEffectView.alpha = 1.0
+            self.settingsVisualEffectView.alpha = 1.0
         }, completion: nil)
     }
     
-    @IBAction func closeTracksTouched(_ sender: Any) {
+    @IBAction func closeSettingsTouched(_ sender: Any) {
         
         UIView.animate(withDuration: 0.5, delay: 0, options: .transitionCrossDissolve, animations: {
-            self.tracksVisualEffectView.alpha = 0.0
+            self.settingsVisualEffectView.alpha = 0.0
         }, completion: {(succeded) in
             self.showPlayerControllers(true)
         })
     }
     
     @IBAction func speechTouched(_ sender: Any) {
-        let alertController = UIAlertController(title: "Select Speech", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         guard let tracks = self.audioTracks else {
             return
         }
+        
+        let alertController = UIAlertController(title: "Select Speech", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         
         for track in tracks {
             alertController.addAction(UIAlertAction(title: track.title, style: UIAlertActionStyle.default, handler: { (alertAction) in
@@ -197,10 +208,11 @@ class MediaPlayerViewController: UIViewController {
     }
     
     @IBAction func subtitleTouched(_ sender: Any) {
-        let alertController = UIAlertController(title: "Select Subtitle", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         guard let tracks = self.textTracks else {
             return
         }
+        
+        let alertController = UIAlertController(title: "Select Subtitle", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
         
         for track in tracks {
             alertController.addAction(UIAlertAction(title: track.title, style: UIAlertActionStyle.default, handler: { (alertAction) in
@@ -244,4 +256,22 @@ class MediaPlayerViewController: UIViewController {
             self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Play)
         }
     }
+    
+    @IBAction func speedRateTouched(_ sender: Any) {
+        let alertController = UIAlertController(title: "Select Speed Rate", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        alertController.addAction(UIAlertAction(title: "Normal", style: UIAlertActionStyle.default, handler: { (alertAction) in
+            self.player?.rate = 1
+            self.updateAnimatedPlayButton()
+        }))
+        alertController.addAction(UIAlertAction(title: "x2", style: UIAlertActionStyle.default, handler: { (alertAction) in
+            self.player?.rate = 2
+            self.updateAnimatedPlayButton()
+        }))
+        alertController.addAction(UIAlertAction(title: "x3", style: UIAlertActionStyle.default, handler: { (alertAction) in
+            self.player?.rate = 3
+            self.updateAnimatedPlayButton()
+        }))
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }
