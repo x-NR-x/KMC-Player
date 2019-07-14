@@ -9,7 +9,7 @@ target 'KMC-Player' do
 
   pod 'PlayKit'
   pod 'PlayKitProviders'
-  pod 'KalturaClient', :path => '/Users/nilit.danan/Documents/Projects/KalturaGeneratedAPIClientsSwift'
+  pod 'KalturaClient'
 
   target 'KMC-PlayerTests' do
     inherit! :search_paths

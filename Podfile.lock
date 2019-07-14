@@ -1,7 +1,7 @@
 PODS:
-  - KalturaClient (0.1.0):
-    - KalturaClient/Core (= 0.1.0)
-  - KalturaClient/Core (0.1.0):
+  - KalturaClient (14.1.0):
+    - KalturaClient/Core (= 14.1.0)
+  - KalturaClient/Core (14.1.0):
     - Log (= 1.0)
   - KalturaNetKit (1.2.0):
     - KalturaNetKit/Core (= 1.2.0)
@@ -34,12 +34,13 @@ PODS:
     - ObjcExceptionBridging
 
 DEPENDENCIES:
-  - KalturaClient (from `/Users/nilit.danan/Documents/Projects/KalturaGeneratedAPIClientsSwift`)
+  - KalturaClient
   - PlayKit
   - PlayKitProviders
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - KalturaClient
     - KalturaNetKit
     - Log
     - ObjcExceptionBridging
@@ -50,12 +51,8 @@ SPEC REPOS:
     - SwiftyXMLParser
     - XCGLogger
 
-EXTERNAL SOURCES:
-  KalturaClient:
-    :path: "/Users/nilit.danan/Documents/Projects/KalturaGeneratedAPIClientsSwift"
-
 SPEC CHECKSUMS:
-  KalturaClient: c5b6a8fcf28a9e114c85b25a45090f9da202e0ab
+  KalturaClient: 9fb1b043fa00fa8075f378e478cf444a9372fa3c
   KalturaNetKit: bd5a963f23f3917a059ac374406143fe2d29bf27
   Log: 5e368c9528db07517d18d2d04ff5fe2b6f5a1e21
   ObjcExceptionBridging: c30e00eb3700467e695faeea30e26e18bd445001
@@ -66,6 +63,6 @@ SPEC CHECKSUMS:
   SwiftyXMLParser: 5ebb8793192f403fa8cc691045143906122a7a75
   XCGLogger: 0434f15e3909cdc450bb63faf638b8792ab782ab
 
-PODFILE CHECKSUM: 16ef12f3e20284364a7f07aaa1fcd92407b2b729
+PODFILE CHECKSUM: 34a691351db0314cce656d1f5902668f8fb6405b
 
 COCOAPODS: 1.7.1
