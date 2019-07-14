@@ -38,7 +38,7 @@ class UIAnimatedPlayButton: UIButton {
     }
     
     var lineColor: UIColor {
-        return self.titleColor(for: UIControlState.normal) ?? .white
+        return self.titleColor(for: UIControl.State.normal) ?? .white
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -80,7 +80,7 @@ class UIAnimatedPlayButton: UIButton {
         layer.path = path.cgPath
         layer.lineWidth = self.lineWidth
         layer.strokeColor = self.lineColor.cgColor
-        layer.lineCap = "round"
+        layer.lineCap = convertToCAShapeLayerLineCap("round")
         
         let bound = CGPath(__byStroking: layer.path!, transform: nil, lineWidth: layer.lineWidth, lineCap: CGLineCap.butt, lineJoin: CGLineJoin.miter, miterLimit: layer.miterLimit)
         
@@ -136,4 +136,9 @@ class UIAnimatedPlayButton: UIButton {
         
         self.currentButtonState = state
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCAShapeLayerLineCap(_ input: String) -> CAShapeLayerLineCap {
+	return CAShapeLayerLineCap(rawValue: input)
 }

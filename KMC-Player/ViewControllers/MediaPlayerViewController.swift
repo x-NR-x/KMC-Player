@@ -8,6 +8,7 @@
 
 import UIKit
 import PlayKit
+import PlayKitProviders
 import KalturaClient
 
 class MediaPlayerViewController: UIViewController {
@@ -79,10 +80,11 @@ class MediaPlayerViewController: UIViewController {
                 let mediaConfig = MediaConfig(mediaEntry: mediaEntry, startTime: 0.0)
                 self.mediaProgressSlider.value = 0.0
                 
+                print("Nilit: MediaEntry: \(mediaEntry.id) duration: \(mediaEntry.duration)")
                 do {
                     self.player = try PlayKitManager.shared.loadPlayer(pluginConfig: nil)
                     self.registerPlayerEvents()
-                    self.player!.prepare(mediaConfig)
+                    self.player?.prepare(mediaConfig)
                     self.player?.view = self.playerView
                 } catch let e {
                     print("Error loading the player: \(e)")
@@ -119,7 +121,7 @@ class MediaPlayerViewController: UIViewController {
             return
         }
         
-        if player.isPlaying {
+        if player.rate > 0 {
             self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Pause)
         } else {
             self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Play)
@@ -197,10 +199,10 @@ class MediaPlayerViewController: UIViewController {
             return
         }
         
-        let alertController = UIAlertController(title: "Select Speech", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let alertController = UIAlertController(title: "Select Speech", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         
         for track in tracks {
-            alertController.addAction(UIAlertAction(title: track.title, style: UIAlertActionStyle.default, handler: { (alertAction) in
+            alertController.addAction(UIAlertAction(title: track.title, style: UIAlertAction.Style.default, handler: { (alertAction) in
                 self.player?.selectTrack(trackId: track.id)
             }))
         }
@@ -212,10 +214,10 @@ class MediaPlayerViewController: UIViewController {
             return
         }
         
-        let alertController = UIAlertController(title: "Select Subtitle", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
+        let alertController = UIAlertController(title: "Select Subtitle", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
         
         for track in tracks {
-            alertController.addAction(UIAlertAction(title: track.title, style: UIAlertActionStyle.default, handler: { (alertAction) in
+            alertController.addAction(UIAlertAction(title: track.title, style: UIAlertAction.Style.default, handler: { (alertAction) in
                 self.player?.selectTrack(trackId: track.id)
             }))
         }
@@ -243,31 +245,30 @@ class MediaPlayerViewController: UIViewController {
             return
         }
         
-        if !(player.isPlaying) {
+        if !player.isPlaying {
             self.mediaProgressTimer = Timer.scheduledTimer(timeInterval: 0.5, target: self, selector: #selector(mediaProgressTimerFired), userInfo: nil, repeats: true)
             
             player.play()
-            self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Pause)
             self.showPlayerControllers(false)
         } else {
             self.mediaProgressTimer?.invalidate()
             self.mediaProgressTimer = nil
             player.pause()
-            self.animatedPlayButton.transformToState(UIAnimatedPlayButtonState.Play)
         }
+        self.updateAnimatedPlayButton()
     }
     
     @IBAction func speedRateTouched(_ sender: Any) {
-        let alertController = UIAlertController(title: "Select Speed Rate", message: nil, preferredStyle: UIAlertControllerStyle.actionSheet)
-        alertController.addAction(UIAlertAction(title: "Normal", style: UIAlertActionStyle.default, handler: { (alertAction) in
+        let alertController = UIAlertController(title: "Select Speed Rate", message: nil, preferredStyle: UIAlertController.Style.actionSheet)
+        alertController.addAction(UIAlertAction(title: "Normal", style: UIAlertAction.Style.default, handler: { (alertAction) in
             self.player?.rate = 1
             self.updateAnimatedPlayButton()
         }))
-        alertController.addAction(UIAlertAction(title: "x2", style: UIAlertActionStyle.default, handler: { (alertAction) in
+        alertController.addAction(UIAlertAction(title: "x2", style: UIAlertAction.Style.default, handler: { (alertAction) in
             self.player?.rate = 2
             self.updateAnimatedPlayButton()
         }))
-        alertController.addAction(UIAlertAction(title: "x3", style: UIAlertActionStyle.default, handler: { (alertAction) in
+        alertController.addAction(UIAlertAction(title: "x3", style: UIAlertAction.Style.default, handler: { (alertAction) in
             self.player?.rate = 3
             self.updateAnimatedPlayButton()
         }))

@@ -8,6 +8,7 @@ target 'KMC-Player' do
   use_frameworks!
 
   pod 'PlayKit'
+  pod 'PlayKitProviders'
   pod 'KalturaClient', :path => '/Users/nilit.danan/Documents/Projects/KalturaGeneratedAPIClientsSwift'
 
   target 'KMC-PlayerTests' do

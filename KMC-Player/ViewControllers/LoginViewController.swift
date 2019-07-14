@@ -35,8 +35,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func loginAlert(message: String) {
-        let alert = UIAlertController(title: "Login", message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil))
+        let alert = UIAlertController(title: "Login", message: message, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.cancel, handler: nil))
         
         self.show(alert, sender: nil)
     }
@@ -101,8 +101,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.showActivityView(false)
             
             if error != nil {
-                let alert = UIAlertController(title: "Login", message: error?.message, preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertActionStyle.cancel, handler: nil))
+                let alert = UIAlertController(title: "Login", message: error?.message, preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "Try Again", style: UIAlertAction.Style.cancel, handler: nil))
                 self.show(alert, sender: nil)
             }
             else {

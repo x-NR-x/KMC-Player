@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7AD6D66FA24B5825344837909D3646E44A990FF6",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7AD6D66FA24B5825344837909D3646E44A990FF6" : 9223372036854775807,
+    "2EE8A25F56FF8492596544BCA327C2E7C4270C03" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "230170CD-4653-4620-B372-D5F120B56C6D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7AD6D66FA24B5825344837909D3646E44A990FF6" : "KMC-Player\/",
+    "2EE8A25F56FF8492596544BCA327C2E7C4270C03" : "KalturaGeneratedAPIClientsSwift\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "KMC-Player",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "KMC-Player.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/kaltura\/KalturaGeneratedAPIClientsSwift",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "2EE8A25F56FF8492596544BCA327C2E7C4270C03"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/x-NR-x\/KMC-Player.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7AD6D66FA24B5825344837909D3646E44A990FF6"
+    }
+  ]
+}
